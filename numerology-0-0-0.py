@@ -84,7 +84,8 @@ def pers_mo(pers_year, mth):
         prm_sum = sum(prm_int)
         return prm_sum
     else:
-        return p_mo
+        prm = p_mo
+        return prm
 
 if action == "1":
     yr = input("What is the current year? ")
