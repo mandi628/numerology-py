@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Add function to pull the current date from computer, instead of asking for input from user
+- Update help.txt
 
 ### Removed
 
