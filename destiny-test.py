@@ -29,6 +29,8 @@ letters = {
     "Z":8
 }
 
+vowels = ["A", "E", "I", "O", "U", "Y"]
+
 first = input("Enter your first name: ")
 first = first.upper()
 first_sp = " ".join(first)
