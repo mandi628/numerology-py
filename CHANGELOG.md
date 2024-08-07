@@ -8,14 +8,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- 
+- Maturity Number
+- Full Birth Chart
+- Prediction Chart
+- Major Cycles
+- Pinnacles & Challenges
+- Relationship Chart between two people
+- Descriptive text to make results meaningful
 
 ### Changed
 
 - Add function to pull the current date from computer, instead of asking for input from user
-- ** Fix Soul code
 
 ### Removed
+
+## [0.3.3] - 2024-08-07
+
+### Changed
+
+- Fix bugs in Soul Number calculation
+- Also fixed issue where repeating a menu item caused it to break due to repeated use of certain variable labels
 
 ## [0.3.2] - 2024-08-07
 
