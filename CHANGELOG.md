@@ -22,7 +22,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Life Path Number calculation
 - Destiny Number calculation
-- Personality Number calculation
+- Personality Number calculation (worked, but now broken)
+- Soul Number calculation (currently broken)
 
 ### Changed
 

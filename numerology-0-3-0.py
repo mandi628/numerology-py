@@ -88,6 +88,21 @@ def consonants(name):
         con_int.append(letters.get(i))
     return con_int
 
+def vowels(name):
+    name = name.upper()
+    name_sp = " ".join(name)
+    name_list = []
+    for n in name_sp.split():
+        name_list.append(n)
+    vow_list = []
+    for v in name_list:
+        if v in vowels:
+            vow_list.append(v)
+    vow_int = []
+    for i in vow_list:
+        vow_int.append(letters.get(i))
+    return vow_int
+
 def univ_yr(date):
     yr = date[-4:]
     yr_list = make_list(yr)
@@ -130,6 +145,12 @@ def birth_no(birth):
     b_no = simplify(date_list)
     return b_no
 
+def soul_no(first, middle, last):
+    full_name = first + middle + last
+    vow = vowels(full_name)
+    soul = simplify(vow)
+    return soul
+
 def dest_no(first, middle, last):
     full_name = first + middle + last
     full_name_int = convert(full_name)
@@ -169,7 +190,8 @@ while again == "y":
         print("%s's Birth Number is %d." % (first, b_no))
 
     elif action == "4": # Soul Number
-        print("I'm sorry - I can't do that yet.")
+        soul = soul_no(first, middle, last)
+        print("%s's Soul Number is %d." % (first, soul))
 
     elif action == "5": # Life Path Number
         l_path = lp_no(birth)
