@@ -13,8 +13,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Add function to pull the current date from computer, instead of asking for input from user
+- ** Fix Soul code
 
 ### Removed
+
+## [0.3.2] - In progress
+
+### Changed
+
+- Fix bugs in Personality Number calculation
+
+## [0.3.1] - 2024-08-07
+
+### Added
+
+- Personality Number calculation (worked, but now broken)
+- Soul Number calculation (broke the same time as Personality)
+
+### Changed
+
+- Improved Destiny Number calculation code with functions
 
 ## [0.3.0] - 2024-08-06
 
@@ -22,8 +40,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Life Path Number calculation
 - Destiny Number calculation
-- Personality Number calculation (worked, but now broken)
-- Soul Number calculation (currently broken)
 
 ### Changed
 
