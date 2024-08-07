@@ -21,6 +21,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - Life Path Number calculation
+- Destiny Number calculation
+- Personality Number calculation
+
+### Changed
+
+- Improved use of functions and shortened code
+- Requested data from user up front to store for all functions, instead of repeated requests
 
 ## [0.2.0] - 2024-08-06
 

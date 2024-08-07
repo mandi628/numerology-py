@@ -3,7 +3,9 @@
 # NUMEROLOGY 0.2.0 - mandi628
 # Started 2024.08.06
 
-#letters = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8, "I":9, "J":1, "K":2, "L":3, "M":4, "N":5, "O":6, "P":7, "Q":8, "R":9, "S":1, "T":2, "U":3, "V":4, "W":5, "X":6, "Y":7, "Z":8}
+letters = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8, "I":9, "J":1, "K":2, "L":3, "M":4, "N":5, "O":6, "P":7, "Q":8, "R":9, "S":1, "T":2, "U":3, "V":4, "W":5, "X":6, "Y":7, "Z":8}
+
+vowels = ["A", "E", "I", "O", "U", "Y"]
 
 print("\nWELCOME to Numerology 0.2.0!\nNumerology calculations can be frustrating to calculate, so let me help you.")
 print("\nTo use this app, type the number of the calculation you would like to calculate.")
@@ -14,11 +16,17 @@ print("To exit, type 'x' at the prompt.")
 def menu():
     print("\nHere are the calculations we can make:")
     print("\nUniversal Numbers:\n     1) Universal Year\n     2) Universal Month")
-    print("\nBasic Calculations:\n     3) Birth Number\n     4) Soul Number\n     5) Life Path Number\n     6) Destiny Number")
-    # \n     7) Maturity Number (coming soon)\n     8) Other Number (coming soon)
+    print("\nBasic Calculations:\n     3) Birth Number\n     4) Soul Number\n     5) Life Path Number\n     6) Destiny Number\n     8) Personality Number")
+    # \n     7) Maturity Number (coming soon))
     print("\nPredictive Calculations:\n     9) Personal Year\n    10) Personal Month\n    11) Personal Day\n    14) Age Vibration")
     # \n    12) Pinnacles & Challenges\n    13) Major Cycles
 #    print("\nComplete Charts:\n    15) Birth Chart (w/option to save)\n    16) Comparison Chart (w/option to save)\n    17) Prediction Chart (w/option to save)")
+
+first = input("\nWhat is the person's full first name? ")
+middle = input("What is the person's middle name? ")
+last = input("What is the person's last name at birth? ")
+birth = input("What is the person's birthdate? (MM DD YYYY) ")
+date = input("What is the current date? (MM DD YYYY) ")
 
 def simplify(ent_int):
     num_sum = sum(ent_int)
@@ -50,17 +58,97 @@ def make_list(entry):
     return ent_int
 
 def convert(name):
-    nom = name.upper()
-    name_list = make_list(nom)
-    nom_int = []
-    for n in nom:
-        nom_int.append(letters.get(n))
-    return nom_int
+    name = name.upper()
+    name_sp = " ".join(name)
+    name_list = []
+    for n in name_sp.split():
+        name_list.append(n)
+    name_int = []
+    for n in name_list:
+        name_int.append(letters.get(n))
+    return name_int
 
 def lp_no(birth):
     birth_list = make_list(birth)
     lpath = simplify(birth_list)
     return lpath
+
+def consonants(name):
+    name = name.upper()
+    name_sp = " ".join(name)
+    name_list = []
+    for n in name_sp.split():
+        name_list.append(n)
+    con_list = []
+    for c in name_list:
+        if c not in vowels:
+            con_list.append(c)
+    con_int = []
+    for i in con_list:
+        con_int.append(letters.get(i))
+    return con_int
+
+def univ_yr(date):
+    yr = date[-4:]
+    yr_list = make_list(yr)
+    univ_yr = simplify(yr_list)
+    return univ_yr
+
+def pers_yr(birth, date):
+    birth = birth[:5]
+    date = date[-4:]
+    pyr = birth + date
+    pyr_list = make_list(pyr)
+    pers_yr = simplify(pyr_list)
+    return pers_yr
+
+def univ_mo(date):
+    mo = date[:2] + date[-4:]
+    mo_list = make_list(mo)
+    univ_mo = simplify(mo_list)
+    return univ_mo
+
+def pers_mo(birth, date):
+    birth = birth[:5]
+    date = date[:2] + date[-4:]
+    pmo = birth + date
+    pmo_list = make_list(pmo)
+    pers_mo = simplify(pmo_list)
+    return pers_mo
+
+def pers_day(birth, date):
+    birth = birth[:5]
+    date = date
+    pday = birth + date
+    pday_list = make_list(pday)
+    pers_day = simplify(pday_list)
+    return pers_day
+
+def birth_no(birth):
+    date = birth[3:5]
+    date_list = make_list(date)
+    b_no = simplify(date_list)
+    return b_no
+
+def dest_no(first, middle, last):
+    full_name = first + middle + last
+    full_name_int = convert(full_name)
+    destiny = simplify(full_name_int)
+    return destiny
+
+def personality(first, middle, last):
+    full_name = first + middle + last
+    con = consonants(full_name)
+    pers = simplify(con)
+    return pers
+
+def age_vib():
+    age = int(input("What was %s's age at the beginning of the year? " % first))
+    age1 = age + 1
+    age_ls = str(age) + str(age1)
+    age_list = make_list(age_ls)
+    age_vib = simplify(age_list)
+    return age_vib
 
 menu()
 again = "y"
@@ -68,79 +156,47 @@ again = "y"
 while again == "y":
     action = input("\nWhat would you like to calculate? ")
     if action == "1": # Universal Year
-        name = input("\nWhat is the person's name? ")
-        yr = input("What is the current year? ")
-        yr_list = make_list(yr)
-        univ_yr = simplify(yr_list)
+        univ_yr = univ_yr(date)
         print("The current Universal Year is", univ_yr)
 
     elif action == "2": # Universal Month
-        name = input("\nWhat is the person's name? ")
-        mot = input("What is the current month? (please enter digits) ")
-        yr = input("What is the current year? ")
-        mot_list = make_list(mot)
-        yr_list = make_list(yr)
-        um_list = mot_list + yr_list
-        univ_mo = simplify(um_list)
+        univ_mo = univ_mo(date)
         print("The current Universal Month is", univ_mo)
 
     elif action == "3": # Birth Number
         print("\nThis is the numerological significance of the day of the month they were born on.")
-        name = input("\nWhat is the person's name? ")
-        date = input("What the day number of birth? ")
-        date_list = make_list(date)
-        b_no = simplify(date_list)
-        print("%s's Birth Number is %d." % (name, b_no))
+        b_no = birth_no(birth)
+        print("%s's Birth Number is %d." % (first, b_no))
 
     elif action == "4": # Soul Number
         print("I'm sorry - I can't do that yet.")
 
     elif action == "5": # Life Path Number
-        name = input("\nWhat is the person's name? ")
-        birth = input("What is their birthday? (MMDDYYYY) ")
         l_path = lp_no(birth)
-        print("%s's Life Path Number is %d." % (name, l_path))
+        print("%s's Life Path Number is %d." % (first, l_path))
 
     elif action == "6": # Destiny Number
-        first = input("Enter your first name: ")
-        first_list = " ".join(first)
-        print(first_list)
+        destiny = dest_no(first, middle, last)
+        print("%s's Destiny Number is %d." % (first, destiny))
 
     elif action == "7": # Maturity Number
         print("I'm sorry - I can't do that yet.")
 
-    elif action == "8": # Other Number
-        print("I'm sorry - I can't do that yet.")
+    elif action == "8": # Personality Number
+        personality = personality(first, middle, last)
+        print("%s's Personality Number is %d." % (first, personality))
 
     elif action == "9": # Personal Year
-        name = input("\nWhat is the person's name? ")
-        bd = input("What is the birth month and day (MMDD)? ")
-        yr = input("What is the current year (YYYY)? ")
-        bd_list = make_list(bd)
-        yr_list = make_list(yr)
-        py_list = bd_list + yr_list
-        pers_yr = simplify(py_list)
-        print("%s's Personal Year number is %d." % (name, pers_yr))
+        pers_yr = pers_yr(birth, date)
+        print("%s's Personal Year number is %d." % (first, pers_yr))
 
     elif action == "10": # Personal Month
-        name = input("\nWhat is the person's name? ")
-        bd = input("What is the birth month and day (MMDD)? ")
-        mo = input("What is the current year & month (MMYYYY)? ")
-        bd_list = make_list(bd)
-        mo_list = make_list(mo)
-        pm_list = bd_list + mo_list
-        pers_mo = simplify(pm_list)
-        print("%s's Personal Month number is %d." % (name, pers_mo))
+        pers_mo = pers_mo(birth, date)
+        print("%s's Personal Month number is %d." % (first, pers_mo))
 
     elif action == "11": # Personal Day
-        name = input("\nWhat is the person's name? ")
-        bd = input("What is the birth month and day (MMDD)? ")
-        day = input("What is the current date? (MMDDYYYY)? ")
-        bd_list = make_list(bd)
-        day_list = make_list(day)
-        pd_list = bd_list + day_list
-        pers_day = simplify(pd_list)
-        print("%s's Personal Day number is %d." % (name, pers_day))
+        pers_day = pers_day(birth, date)
+        print("%s's Personal Day number is %d." % (first, pers_day))
 
     elif action == "12": # Pinnacles & Challenges
         print("I'm sorry - I can't do that yet.")
@@ -149,15 +205,8 @@ while again == "y":
         print("I'm sorry - I can't do that yet.")
 
     elif action == "14": # Age Vibration
-        name = input("\nWhat is the person's name? ")
-        age1 = input("What was %s's age at the beginning of the year? " % name)
-        age2 = int(age1) + 1
-        age2 = str(age2)
-        age1_list = make_list(age1)
-        age2_list = make_list(age2)
-        age_list = age1_list + age2_list
-        age_vib = simplify(age_list)
-        print("%s's Age Vibration this year is %d." % (name, age_vib))
+        age_vib = age_vib()
+        print("%s's Age Vibration this year is %d." % (first, age_vib))
 
     elif action == "m":
         menu()
