@@ -18,8 +18,8 @@ def menu():
     print("\nHere are the calculations we can make:")
     print("\nUniversal Numbers:\n     a) Universal Year\n     b) Universal Month")
     print("\nBasic Calculations:\n     c) Birth Number\n     d) Soul Number\n     e) Life Path Number\n     f) Destiny Number\n     g) Maturity Number\n     h) Personality Number")
-    print("\nPredictive Calculations:\n     i) Personal Year\n     j) Personal Month\n     k) Personal Day\n     n) Age Vibration")
-    # \n    12) Pinnacles & Challenges\n    13) Major Cycles
+    print("\nPredictive Calculations:\n     i) Personal Year\n     j) Personal Month\n     k) Personal Day\n     m) Major Cycles\n     n) Age Vibration")
+    # \n    12) Pinnacles & Challenges
 #    print("\nComplete Charts:\n    15) Birth Chart (w/option to save)\n    16) Comparison Chart (w/option to save)\n    17) Prediction Chart (w/option to save)\n    18) Prediction Comparison Chart (w/option to save)")
     print("\nApp Options:\n     'menu' - Display the menu options again.\n     'new' - Prompts for new subject data.\n     'help' - Display help file.\n     'exit' - Exit the program.")
 
@@ -174,6 +174,22 @@ def age_vib():
     age_vib = simplify(age_list)
     return age_vib
 
+def maj_cycles(birth):
+    cycles = []
+    mc1 = birth[:2]
+    mc1_list = make_list(mc1)
+    mc1s = simplify(mc1_list)
+    cycles.append(mc1s)
+    mc2 = birth[3:5]
+    mc2_list = make_list(mc1)
+    mc2s = simplify(mc2_list)
+    cycles.append(mc2s)
+    mc3 = birth[6:]
+    mc3_list = make_list(mc3)
+    mc3s = simplify(mc1_list)
+    cycles.append(mc2s)
+    return cycles
+
 menu()
 #data()
 again = "y"
@@ -229,7 +245,8 @@ while again == "y":
         print("I'm sorry - I can't do that yet.")
 
     elif action == "m": # Major Cycles
-        print("I'm sorry - I can't do that yet.")
+        major_cycles = maj_cycles(birth)
+        print(major_cycles)
 
     elif action == "n": # Age Vibration
         agevibe = age_vib()
