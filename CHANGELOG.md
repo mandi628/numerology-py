@@ -10,7 +10,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Full Birth Chart
 - Prediction Chart
-- Pinnacles & Challenges
 - Relationship Chart between two people
 - Descriptive text to make results meaningful
 
@@ -19,6 +18,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add function to pull the current date from computer, instead of asking for input from user
 
 ### Removed
+
+## [0.6.0] - In progress
+
+### Added
+
+- Pinnacles & Challenges calculations
 
 ## [0.5.0] - 2024-08-07
 
