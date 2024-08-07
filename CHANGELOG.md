@@ -20,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Removed
 
-## [0.5.0] - In progress
+## [0.5.0] - 2024-08-07
 
 ### Added
 
