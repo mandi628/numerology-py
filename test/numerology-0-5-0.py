@@ -192,6 +192,14 @@ def maj_cycles(birth):
     cycles.append(mc3s)
     return cycles
 
+def cycle_age(birth):
+    lpn = lp_no(birth)
+    ages = []
+    if lpn == 1:
+        ages.append(26)
+        ages.append(53)
+    return ages
+
 menu()
 #data()
 again = "y"
@@ -248,7 +256,10 @@ while again == "y":
 
     elif action == "m": # Major Cycles
         major_cycles = maj_cycles(birth)
-        print(major_cycles)
+        cycle_ages = ages(birth)
+        print("%s's first Major Cycle, from birth to age ?, is a %d." % (first, major_cycles[0]))
+        print("%s's second Major Cycle, from age ? to ?, is a %d." % (first, major_cycles[1]))
+        print("%s's third Major Cycle, from age ? to death, is a %d." % (first, major_cycles[2]))
 
     elif action == "n": # Age Vibration
         agevibe = age_vib()
