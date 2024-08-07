@@ -1,43 +1,55 @@
-Welcome to Numerology 0.3.2!
+Welcome to Numerology 0.4.0!
 
 This is the help file, which will explain the menu options.
 
-     m    Reprints the menu selections
-     h    Prints the help document (this one)
-     x    Exits the program
+     menu    Reprints the menu selections
+     new     Runs the data input to change people
+     help    Prints the help document (this one)
+     exit    Exits the program
 
-1) UNIVERSAL YEAR
+a) UNIVERSAL YEAR
     This calculates the energy for the universe for the current year.
 
-2) UNIVERSAL MONTH
+b) UNIVERSAL MONTH
     This calculates the energy for the universe for the current month, which is a more
     subtle influence to the Universal Year.
 
-3) BIRTH NUMBER
+c) BIRTH NUMBER
     This is the  number which influences your personality. While it influences everyone
     born on the same day, its effect with your other numbers is unique. We use the day of
     birth to calculate this number.
 
-4) SOUL NUMBER
+d) SOUL NUMBER
+    Calculated from the vowels in your name at birth, the Soul Number tells your heart's
+    desire. It is what you yearn for throughout your life.
 
-5) LIFE PATH NUMBER
+e) LIFE PATH NUMBER
+    The Life Path Number is calculated from your birth date. You can find your career path
+    here. This number tells you what path you should be on.
 
-6) DESTINY NUMBER
+f) DESTINY NUMBER
+    Your Destiny Number is the goal of your life. This helps you determine what kinds of
+    things you're destined for. This is calculated from all the letters in your full
+    name at birth.
 
-7) MATURITY NUMBER
+g) MATURITY NUMBER
+    The Maturity Number helps identify who you will be when you read maturity. It is the
+    combination of your Life Path number and your Destiny number.
 
-8) OTHER NUMBER
+h) PERSONALITY NUMBER
+    Calculated from the consonants in your name, the Personality Number explores how others
+    see you. From what you wear to how you act, you can see it all here.
 
-9) PERSONAL YEAR
+i) PERSONAL YEAR
     The Personal Year number is your vibration for the year. This is the strongest influence
     on your current experiences. It is calculated by your birthday with the current year.
 
-10) PERSONAL MONTH
+j) PERSONAL MONTH
     The Personal Month is like adding spice to the pot. It adds flavor to your energy for the
     year, and lasts only for the current month. We start with your Personal Year number, and
     add the number of the month.
 
-11) PERSONAL DAY
+k) PERSONAL DAY
     The Personal Day number is like icing on a cake. Just a subtle twist to your energy for
     the month. For this one, we take your Personal Month number, and add the number of the
     specific day.

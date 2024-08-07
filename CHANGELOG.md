@@ -8,7 +8,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- Maturity Number
 - Full Birth Chart
 - Prediction Chart
 - Major Cycles
@@ -21,6 +20,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add function to pull the current date from computer, instead of asking for input from user
 
 ### Removed
+
+## [0.4.0] - 2024-08-07
+
+### Added
+
+- Maturity number
+- Menu option 'new' to change data set for calculation.
+
+### Changed
+
+- Updated 'help.txt' to match menu updates
+
+### Removed
+
+- y/n option, leaving only menu prompt
 
 ## [0.3.3] - 2024-08-07
 
