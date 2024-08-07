@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Prediction Chart
 - Relationship Chart between two people
 - Descriptive text to make results meaningful
+- Number lookup (type the number in the prompt and get a text file explaining the number)
+- Let user save charts as text files
 
 ### Changed
 
