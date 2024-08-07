@@ -88,18 +88,15 @@ def consonants(name):
         con_int.append(letters.get(i))
     return con_int
 
-def vowels(name):
+def not_cons(name):
     name = name.upper()
     name_sp = " ".join(name)
     name_list = []
     for n in name_sp.split():
-        name_list.append(n)
-    vow_list = []
-    for v in name_list:
-        if v in vowels:
-            vow_list.append(v)
+        if n in vowels:
+            name_list.append(n)
     vow_int = []
-    for i in vow_list:
+    for i in name_list:
         vow_int.append(letters.get(i))
     return vow_int
 
@@ -147,7 +144,7 @@ def birth_no(birth):
 
 def soul_no(first, middle, last):
     full_name = first + middle + last
-    vow = vowels(full_name)
+    vow = not_cons(full_name)
     soul = simplify(vow)
     return soul
 

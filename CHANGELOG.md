@@ -17,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Removed
 
-## [0.3.2] - In progress
+## [0.3.2] - 2024-08-07
 
 ### Changed
 
