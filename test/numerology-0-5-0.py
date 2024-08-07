@@ -180,14 +180,16 @@ def maj_cycles(birth):
     mc1_list = make_list(mc1)
     mc1s = simplify(mc1_list)
     cycles.append(mc1s)
+
     mc2 = birth[3:5]
-    mc2_list = make_list(mc1)
+    mc2_list = make_list(mc2)
     mc2s = simplify(mc2_list)
     cycles.append(mc2s)
+
     mc3 = birth[6:]
     mc3_list = make_list(mc3)
-    mc3s = simplify(mc1_list)
-    cycles.append(mc2s)
+    mc3s = simplify(mc3_list)
+    cycles.append(mc3s)
     return cycles
 
 menu()
