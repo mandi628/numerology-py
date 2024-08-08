@@ -180,11 +180,11 @@ def age_vib():
 def maj_cycles(birth):
     cycles = []
     mc1 = simplify(make_list(str(birth_s(birth)[1])))
-    cycles.append(mc1s)
+    cycles.append(mc1)
     mc2 = simplify(make_list(str(birth_s(birth)[0])))
-    cycles.append(mc2s)
+    cycles.append(mc2)
     mc3 = simplify(make_list(str(birth_s(birth)[2])))
-    cycles.append(mc3s)
+    cycles.append(mc3)
     return cycles
 
 def cycle_age(birth):

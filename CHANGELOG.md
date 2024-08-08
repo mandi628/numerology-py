@@ -22,7 +22,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Removed
 
-## [0.6.0] - In progress
+## [0.6.1] - 2024-08-08
+
+### Changed
+
+- Corrected variables in revised functions (bug fix)
+- Updated functions with nested function calls
+
+## [0.6.0] - 2024-08-07
 
 ### Added
 
