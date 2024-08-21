@@ -111,6 +111,44 @@ function persYear() {
     }
 }
 
+function persMon() {
+    let persY = persYear().toString();
+    let currMo = currentDate.slice(5, 7);
+    let currMoStr = persY + currMo;
+    let currMoArray = currMoStr.split("").map(Number);
+    let persMo = currMoArray.reduce(addition);
+    if (persMo > 9) {
+        let persMon2 = simplify(persMo);
+        if (persMon2 > 9) {
+            let persMon3 = simplify(persMon2);
+            return persMon3;
+        } else {
+            return persMon2;
+        }
+    } else {
+        return persMo;
+    }
+}
+
+function persDay() {
+    let persMn = persMon().toString();
+    let date = currentDate.slice(8, 10);
+    let currDayStr = persMn + date;
+    let currDayArray = currDayStr.split("").map(Number);
+    let persD = currDayArray.reduce(addition);
+    if (persD > 9) {
+        let persD2 = simplify(persD);
+        if (persD2 > 9) {
+            let persD3 = simplify(persD2);
+            return persD3;
+        } else {
+            return persD2;
+        }
+    } else {
+        return persD;
+    }
+}
+
 console.log(first + " " + middle + " " + last);
 console.log(month + "/" + day + "/" + year + "\n");
 console.log("Birth Number: " + birthNum());
@@ -118,3 +156,5 @@ console.log("Life Path Number: " + lifePath());
 console.log("Universal Year: " + univYear());
 console.log("Universal Month: " + univMon());
 console.log("Personal Year: " + persYear());
+console.log("Personal Month: " + persMon());
+console.log("Personal Day: " + persDay());

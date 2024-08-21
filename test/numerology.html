@@ -7,15 +7,22 @@
         <title>Numerology v1.0.0</title>
     </head>
     <body>
-        <div class="w3-panel w3-center" style="width: 50%;">
-        <form class="w3-form">
-            <label for="first">First name:</label>
-            <input type="text" id="first" placeholder="first name" /><br>
-            <label for="middle">Middle name:</label>
-            <input type="text" id="middle" placeholder="middle name" /><br>
-            <label for="last">Last name:</label>
-            <input type="text" id="last" placeholder="last name" /><br>
-            <br>
+        <header class="w3-container w3-pink" style="padding-bottom: 20px;">
+            <h1 class="w3-center">Numerology 1.0.0</h1>
+        </header>
+        <div class="w3-panel" style="width: 50%; margin: auto; padding-top: 20px;">
+        <form class="w3-form" id="data">
+            <fieldset id="name">
+                <legend>Your Name:</legend>
+                <div class="name-container">
+                    <label for="first">First name:</label>
+                    <input type="text" id="first" placeholder="first name" /><br>
+                    <label for="middle">Middle name:</label>
+                    <input type="text" id="middle" placeholder="middle name" /><br>
+                    <label for="last">Last name:</label>
+                    <input type="text" id="last" placeholder="last name" /><br>
+                </div>
+            </fieldset>
             <label for="month">Month of birth:</label>
             <input type="text" id="month" placeholder="MM" />
             <label for="day">Day of birth:</label>
@@ -26,7 +33,7 @@
             <button id="submit" type="submit">Submit</button>
         </form>
         </div>
-        <div class="w3-container">
+        <div class="w3-container" style="width: 80%; margin: auto;">
             <p id="text">Text here</p>
         </div>
         <script src="numerology-1-0-0.js"></script>
