@@ -1,9 +1,14 @@
-const first = "Amanda";
-const middle = "Christine";
-const last = "Aumann";
-const month = "06";
-const day = "28";
-const year = "1976";
+const numData = document.getElementById('data');
+
+const first = document.getElementById('first');
+const middle = document.getElementById('middle');
+const last = document.getElementById('last');
+const month = document.getElementById('month');
+const day = document.getElementById('day');
+const year = document.getElementById('year');
+const submit = document.getElementById('submit');
+const output = document.getElementById('output');
+
 const vowel = ['A', 'E', 'I', 'O', 'U', 'Y']
 
 let firstUp = first.toUpperCase();
