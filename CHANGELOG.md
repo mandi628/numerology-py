@@ -13,14 +13,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Relationship Chart between two people
 - Descriptive text to make results meaningful
 - Number lookup (type the number in the prompt and get a text file explaining the number)
-- Let user save charts as text files
+- Let user save charts as PDF files
 
 ### Changed
 
-- Add function to pull the current date from computer, instead of asking for input from user
 - Update help.txt
 
 ### Removed
+
+## [1.0.0] - 2024.08.21
+
+### Changed
+
+- Code completely rewritten in JavaScript
+- As written, code pulls current date through a function, so user does not need to enter current date.
 
 ## [0.6.1] - 2024-08-08
 

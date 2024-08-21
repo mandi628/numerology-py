@@ -1,22 +1,20 @@
 # README.md
 
-(Introduction)
+Welcome to Numerology 1.0.0! This is a Numerology calculation app that calculates your numerological energies based on your birth name and birthdate. When fully completed, the app will give you a fully printable Numerology Chart, as well as prediction charts for the current year, and relationship comparison charts.
 
-Project Title: This is the name of the project. It describes the whole project in one sentence, and helps people understand what the main goal and aim of the project is.
+This project was done as an exercise in learning programming, but also because it is a topic that is relevant to the creator. She is an avid numerologist, and wanted a fun way to create charts for family members.
 
-- What was your motivation?
-- Why did you build this project?
-- What problem does it solve?
-- What did you learn?
-- What makes your project stand out?
+During it's creation, the programmer learned a lot about coding and thinking through the logical processes of a program. Completing it in two languages also helped to understand the logical reasonsing of programming. While Python was definitely the easier language to learn, making it useful and relevant to others was not as easy and creating a back-end JavaScript app that could function within a webpage. Additionally, in her pursuit of a career as a web developer and programmer, she needed to learn JavaScript.
+
+One of the things that makes this project stand out is the accessibility to anyone. Many people are curious about the energies that create the world around us. We have our own energies, too, and a basic understanding of numerology can help us understand those energies to work with them when they are good, and counter them when they are a challenge. The information provided here is definitely basic numerology, available in any book on the subject. For a deeper understanding, the user will want to find a numerologist for further clarification and explanation.
 
 ## What the project does
 
-Project Description: A well-crafted description allows you to show off your work to other developers as well as potential employers.
+The user inputs their name and birthdate, and the app calculates their 5 Core Numbers from their Numerology Chart. It will also output a short explanation of the meaning of the numbers in their chart. For comparison charts, this information will be provided on both individuals being compared.
 
-- What your application does
-- Why you used the technologies you used
-- Some of the challenges you faced and features you hope to implement in the future.
+Additionally, the user can print the report with the "Print This Page" button for future reference.
+
+Future versions should include a more aesthetic screen layout, and a better formatted print out, perhaps in PDF format.
 
 ### Features
 
@@ -26,7 +24,11 @@ Project Description: A well-crafted description allows you to show off your work
 
 ### Installation How-To
 
+No installation required. The app is used in the browser window from the [Numerology 1.0.0](https://mandi628.github.io/numerology/index.html) website.
+
 ### How to Use the Project
+
+Simply fill in the fields and hit the button for the data you want to view.
 
 ### Test Examples
 
@@ -45,3 +47,5 @@ Project Description: A well-crafted description allows you to show off your work
 ## Badges
 
 [Badges](https://shields.io)
+
+Updated: 2024.08.21 --mandi628
