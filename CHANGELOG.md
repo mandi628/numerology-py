@@ -21,12 +21,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Removed
 
-## [1.0.0] - 2024.08.21
+## [0.6.2] - 2025-02-16
 
-### Changed
+### Added
 
-- Code completely rewritten in JavaScript
-- As written, code pulls current date through a function, so user does not need to enter current date.
+- Added married name variable
 
 ## [0.6.1] - 2024-08-08
 

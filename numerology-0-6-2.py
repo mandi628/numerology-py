@@ -3,9 +3,13 @@
 # NUMEROLOGY 0.6.2 - mandi628
 # Started 2024.08.06; updated 2025.02.16
 
-letters = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8, "I":9, "J":1, "K":2, "L":3, "M":4, "N":5, "O":6, "P":7, "Q":8, "R":9, "S":1, "T":2, "U":3, "V":4, "W":5, "X":6, "Y":7, "Z":8}
+from datetime import datetime
+from datetime import date
 
-vowels = ["A", "E", "I", "O", "U", "Y"]
+from calcs.menu import *
+from calcs.list import *
+from calcs.simplify import *
+from calcs.core import *
 
 print("\nWELCOME to Numerology 0.6.2!\nNumerology calculations can be frustrating to calculate, so let me help you.")
 print("\nTo use this app, type the number of the calculation you would like to calculate.")
@@ -14,96 +18,19 @@ print("'new' - Asks for new subject data.")
 print("'help' - Displays the help file.")
 print("'exit' - Exits the program.")
 
-def menu():
-    print("\nHere are the calculations we can make:")
-    print("\nUniversal Numbers:\n     a) Universal Year\n     b) Universal Month")
-    print("\nBasic Calculations:\n     c) Birth Number\n     d) Soul Number\n     e) Life Path Number\n     f) Destiny Number\n     g) Maturity Number\n     h) Personality Number")
-    print("\nPredictive Calculations:\n     i) Personal Year\n     j) Personal Month\n     k) Personal Day\n     l) Pinnacles & Challenges\n     m) Major Cycles\n     n) Age Vibration")
-#    print("\nComplete Charts:\n    15) Birth Chart (w/option to save)\n    16) Comparison Chart (w/option to save)\n    17) Prediction Chart (w/option to save)\n    18) Prediction Comparison Chart (w/option to save)")
-    print("\nApp Options:\n     'menu' - Display the menu options again.\n     'new' - Prompts for new subject data.\n     'help' - Display help file.\n     'exit' - Exit the program.")
-
 first = input("\nWhat is the person's full first name? ")
 middle = input("What is the person's middle name? ")
 last = input("What is the person's last name at birth? ")
-female = input("Does this person have a married name? y/n")
+female = input("Does this person have a married name? y/n ")
 
 def married():
-    if female === "y":
+    if female == "y":
         married = input("What is the person's married name? ")
         return married
     else:
         return
-
+married()
 birth = input("What is the person's birthdate? (MM DD YYYY) ")
-date = input("What is the current date? (MM DD YYYY) ")
-
-def simplify(ent_int):
-    num_sum = sum(ent_int)
-    if num_sum > 9:
-        sum_str = str(num_sum)
-        sum_string = " ".join(sum_str)
-        num_sum_int = []
-        for s in sum_string.split():
-            num_sum_int.append(int(s))
-        num_ss = sum(num_sum_int)
-        if num_ss > 9:
-            num_ss_str = str(num_ss)
-            num_string = " ".join(num_ss_str)
-            num_ss_int = []
-            for i in num_string.split():
-                num_ss_int.append(int(i))
-            num_sss = sum(num_ss_int)
-            return num_sss
-        else:
-            return num_ss
-    else:
-        return num_sum
-
-def make_list(entry):
-    ent_list = " ".join(entry)
-    ent_int = []
-    for e in ent_list.split():
-        ent_int.append(int(e))
-    return ent_int
-
-def convert(name):
-    name = name.upper()
-    name_sp = " ".join(name)
-    name_list = []
-    for n in name_sp.split():
-        name_list.append(n)
-    name_int = []
-    for n in name_list:
-        name_int.append(letters.get(n))
-    return name_int
-
-def lp_no(birth):
-    lpath = simplify(make_list(birth))
-    return lpath
-
-def consonants(name):
-    nameu = name.upper()
-    name_sp = " ".join(nameu)
-    name_list = []
-    for n in name_sp.split():
-        if n not in vowels:
-            name_list.append(n)
-    con_int = []
-    for i in name_list:
-        con_int.append(letters.get(i))
-    return con_int
-
-def not_cons(name):
-    nameup = name.upper()
-    name_sp = " ".join(nameup)
-    name_list = []
-    for n in name_sp.split():
-        if n in vowels:
-            name_list.append(n)
-    vow_int = []
-    for i in name_list:
-        vow_int.append(letters.get(i))
-    return vow_int
 
 def date_s(date):
     date_s = []
@@ -145,27 +72,14 @@ def pers_day(birth, date):
     pers_day = simplify(make_list(str(pers_mo(birth, date) + date_s(date)[0])))
     return pers_day
 
-def soul_no(first, middle, last):
-    name_s = first + middle + last
-    soul = simplify(not_cons(name_s))
-    return soul
-
-def dest_no(first, middle, last):
-    name_d = first + middle + last
-    destiny = simplify((convert(name_d)))
-    return destiny
-
-def maturity(birth, first, middle, last):
-    mat_no = simplify(make_list(str(lp_no(birth) + dest_no(first, middle, last))))
-    return mat_no
-
-def personality(first, middle, last):
-    name_p = first + middle + last
-    pers = simplify(consonants(name_p))
-    return pers
+def calculateAge(birth):
+    birthDate = datetime.strptime(birth, "%m %d %Y")
+    today = date.today()
+    age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
+    return age
 
 def age_vib():
-    age = int(input("What was %s's age at the beginning of the year? " % first))
+    calculateAge(birth)
     age1 = age + 1
     age_vib = simplify(make_list(str(age + age1)))
     return age_vib

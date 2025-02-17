@@ -1,4 +1,4 @@
-Welcome to Numerology 0.6.1!
+Welcome to Numerology 0.6.2!
 
 This is the help file, which will explain the menu options.
 
